@@ -1,6 +1,6 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue'
-import Sidebar from '@/components/Sidebar.vue'
+import Sidebar from '@/components/Sidebar/Sidebar.vue'
 import { ref } from 'vue'
 
 const isSidebarOpen = ref(true) // 侧边栏默认展开
@@ -31,13 +31,16 @@ watchEffect(() => {
 .main-container {
   display: flex;
   flex-direction: column;
-  flex: 1; /* 让主容器填充剩余空间 */
+  flex: 1;
+  /* 让主容器填充剩余空间 */
   min-height: 100vh;
-  padding-top: 50px; /* 让出 Navbar 高度 */
+  padding-top: 50px;
+  /* 让出 Navbar 高度 */
 }
 
 .content {
-  flex: 1; /* 让 main 内容自动填充，推动 footer 到底部 */
+  flex: 1;
+  /* 让 main 内容自动填充，推动 footer 到底部 */
   padding: 20px;
   transition: margin-left 0.3s;
 }
@@ -48,10 +51,12 @@ watchEffect(() => {
 }
 
 .expanded {
-  margin-left: 200px; /* 侧边栏展开 */
+  margin-left: 200px;
+  /* 侧边栏展开 */
 }
 
 .collapsed {
-  margin-left: 50px; /* 侧边栏折叠 */
+  margin-left: 50px;
+  /* 侧边栏折叠 */
 }
 </style>

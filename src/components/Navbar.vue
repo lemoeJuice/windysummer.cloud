@@ -34,8 +34,8 @@ async function toggleLocales() {
   </header>
 </template>
 
-  <style scoped>
-  .navbar {
+<style scoped>
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
