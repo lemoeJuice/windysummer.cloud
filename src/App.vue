@@ -3,24 +3,27 @@
 // you can use this to manipulate the document head in any components,
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Vitesse',
+  title: 'WindySummer',
   meta: [
     {
       name: 'description',
-      content: 'Opinionated Vite Starter Template',
+      content: 'WindySummer的主页',
     },
     {
       name: 'theme-color',
-      content: () => isDark.value ? '#00aba9' : '#ffffff',
+      content: () => isDark.value ? '#00c6ff' : '#42a5f5',
     },
   ],
   link: [
     {
       rel: 'icon',
       type: 'image/svg+xml',
-      href: () => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg',
+      href: () => isDark.value ? '/favicon-dark.svg' : '/favicon.svg',
     },
   ],
+})
+watchEffect(() => {
+  document.documentElement.style.backgroundColor = isDark.value ? '#1e3a5f' : '#e0f7fa'
 })
 </script>
 
