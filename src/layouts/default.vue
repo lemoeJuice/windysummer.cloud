@@ -8,36 +8,41 @@ const isSidebarOpen = ref(true) // 侧边栏默认展开
 function toggleSidebar() {
   isSidebarOpen.value = !isSidebarOpen.value
 }
+
+watchEffect(() => {
+  document.documentElement.style.backgroundColor = isDark.value ? '#1e2a35' : '#dff6ff'
+})
 </script>
 
 <template>
-  <div class="layout">
-    <Navbar @toggle-sidebar="toggleSidebar" />
-    <div class="main-container">
-      <Sidebar :is-open="isSidebarOpen" @toggle="toggleSidebar" />
-      <main class="content" :class="{ expanded: isSidebarOpen, collapsed: !isSidebarOpen }">
-        <RouterView />
-        <TheFooter />
-      </main>
-    </div>
+  <Navbar @toggle-sidebar="toggleSidebar" />
+  <div class="main-container">
+    <Sidebar :is-open="isSidebarOpen" @toggle="toggleSidebar" />
+    <main class="content" :class="{ expanded: isSidebarOpen, collapsed: !isSidebarOpen }">
+      <RouterView />
+    </main>
+    <footer class="bottom" :class="{ expanded: isSidebarOpen, collapsed: !isSidebarOpen }">
+      <TheFooter />
+    </footer>
   </div>
 </template>
 
 <style scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
 .main-container {
   display: flex;
-  flex: 1;
-  margin-top: 50px; /* 让出 Navbar 高度 */
+  flex-direction: column;
+  flex: 1; /* 让主容器填充剩余空间 */
+  min-height: 100vh;
+  padding-top: 50px; /* 让出 Navbar 高度 */
 }
 
 .content {
-  flex: 1;
+  flex: 1; /* 让 main 内容自动填充，推动 footer 到底部 */
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.bottom {
   padding: 20px;
   transition: margin-left 0.3s;
 }

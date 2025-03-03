@@ -4,14 +4,14 @@
       <div i-carbon-logo-github />
     </a>
   </nav>
-  <div class="mx-auto mt-5 text-center text-sm opacity-50">
-    <footer class="bg-blue-500 p-4 text-center text-white">
+  <div class="mx-auto mt-4 text-sm opacity-50">
+    <footer class="bg-[#4a90e2] p-4 text-center text-white">
       <p>
         © 2025 Designed by WindySummer, with
         <a href="/about" class="underline">Vitesse</a> template.
       </p>
       <p>
-        <a href="mailto:windysummer@example.com" class="underline">联系我</a> |
+        <a href="mailto:windysummer@example.com" class="underline">{{ $t('footer.contact_me') }}</a> |
         <a href="https://github.com/lemoeJuice" target="_blank" class="underline">GitHub</a>
       </p>
     </footer>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineEmits } from 'vue'
 import { availableLocales, loadLanguageAsync } from '~/modules/i18n'
 
 const emit = defineEmits(['toggleSidebar'])
@@ -42,11 +41,11 @@ async function toggleLocales() {
   left: 0;
   width: 100%;
   height: 50px;
-  background-color: var(--header-bg, #ffffff);
-  color: var(--header-text, #333);
+  background-color: #ffffff;
+  color: #333333;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -65,6 +64,6 @@ async function toggleLocales() {
 /* 右侧按钮容器 */
 .navbar-content {
   display: flex;
-  gap: 12px;
+  gap: 16px;
 }
 </style>
