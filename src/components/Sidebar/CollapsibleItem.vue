@@ -9,7 +9,7 @@ const _props = defineProps({
 
 // 读取 index.md 和 title.txt
 const files = import.meta.glob('/src/pages/**/index.md')
-const titles = import.meta.glob('/src/pages/**/title.txt', { as: 'raw' })
+const titles = import.meta.glob('/src/pages/**/title.txt', { query: '?raw', import: 'default' })
 
 const items = ref([])
 

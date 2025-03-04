@@ -8,10 +8,6 @@ const isSidebarOpen = ref(true) // 侧边栏默认展开
 function toggleSidebar() {
   isSidebarOpen.value = !isSidebarOpen.value
 }
-
-watchEffect(() => {
-  document.documentElement.style.backgroundColor = isDark.value ? '#1e2a35' : '#dff6ff'
-})
 </script>
 
 <template>

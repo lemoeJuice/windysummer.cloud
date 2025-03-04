@@ -12,6 +12,12 @@ useHead({
     },
   ],
 })
+
+onMounted(() => {
+  watchEffect(() => {
+    document.documentElement.style.backgroundColor = isDark.value ? '#1e2a35' : '#dff6ff'
+  })
+})
 </script>
 
 <template>
