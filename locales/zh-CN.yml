@@ -1,2 +1,5 @@
+button:
+  toggle_dark: 深色模式
+  toggle_langs: 更改语言
 footer:
   contact_me: 联系我

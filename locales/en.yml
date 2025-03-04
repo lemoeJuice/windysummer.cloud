@@ -1,2 +1,5 @@
+button:
+  toggle_dark: Toggle dark mode
+  toggle_langs: Change languages
 footer:
   contact_me: Contact
