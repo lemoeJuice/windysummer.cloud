@@ -12,7 +12,7 @@ const _props = defineProps({
     <nav v-if="isOpen" class="mt-4">
       <ul>
         <SidebarItem label="Home" link="/" />
-        <CollapsibleItem label="文章" link="/posts/" />
+        <CollapsibleItem label="Blogs" link="/posts/" />
       </ul>
     </nav>
   </aside>
@@ -34,6 +34,7 @@ const _props = defineProps({
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   /* 添加阴影 */
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .open {

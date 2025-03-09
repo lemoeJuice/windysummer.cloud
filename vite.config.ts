@@ -25,8 +25,6 @@ export default defineConfig({
     },
   },
 
-  assetsInclude: ['**/*.txt'], // 允许 Vite 处理 .txt 文件
-
   plugins: [
     VueMacros({
       plugins: {
@@ -93,9 +91,9 @@ export default defineConfig({
           },
         })
         md.use(await Shiki({
-          defaultColor: false,
+          defaultColor: 'dark',
           themes: {
-            light: 'vitesse-light',
+            light: 'vitesse-dark',
             dark: 'vitesse-dark',
           },
         }))
