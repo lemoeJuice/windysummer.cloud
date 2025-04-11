@@ -22,6 +22,7 @@ declare module 'vue-router/auto-routes' {
     '/[...all]': RouteRecordInfo<'/[...all]', '/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
     '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
     '/posts/cf_reverse_proxy/': RouteRecordInfo<'/posts/cf_reverse_proxy/', '/posts/cf_reverse_proxy', Record<never, never>, Record<never, never>>,
+    '/posts/hrt/': RouteRecordInfo<'/posts/hrt/', '/posts/hrt', Record<never, never>, Record<never, never>>,
     '/posts/md_test/': RouteRecordInfo<'/posts/md_test/', '/posts/md_test', Record<never, never>, Record<never, never>>,
   }
 }
