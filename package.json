@@ -3,6 +3,8 @@
   "private": true,
   "packageManager": "pnpm@9.15.3",
   "scripts": {
+    "predev": "node scripts/genMeta.cjs",
+    "prebuild": "node scripts/genMeta.cjs",
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
